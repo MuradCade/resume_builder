@@ -9,17 +9,6 @@ This is a **Resume Builder Web App** built using **PHP (Procedural), jQuery, AJA
 - **User Authentication**: Users can create an account and log in using their email and password.
 - **Email Confirmation**: After account creation, an email confirmation is sent to the user to verify the account.
 - **Congratulation Email**: A congratulatory email is sent when the user's email is confirmed.
-- **Resume Builder**: Users can input personal information, including:
-    - Full Name
-    - Email Address
-    - Phone Number
-    - Address
-- **Sections Included**:
-    - **Education**: Users can add their education details.
-    - **Experience**: Users can add their work experience.
-    - **Qualities**: Users can list their personal and professional qualities.
-    - **Languages**: Users can add languages they are proficient in.
-    - **References**: Users can provide references for their resume.
 - **PDF Export**: Users can download their resume as a PDF with the information they've entered.
 - **Single Template**: The web app offers a single, clean, blank template for building resumes.
 

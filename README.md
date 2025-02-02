@@ -63,7 +63,7 @@ This is a **Resume Builder Web App** built using **PHP (Procedural), jQuery, AJA
     - Configure PHPMailer with your email service provider details.
 
 5. **Access the Application:**
-    - Navigate to your local server (e.g., `http://localhost/resume-builder/`) to start using the app.
+    - Navigate to your local server (e.g., `http://localhost/index.php`) to start using the app.
 
 ## Contributing:
 

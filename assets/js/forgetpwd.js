@@ -3,6 +3,8 @@ $(document).ready(function(){
 
     // lookup if email exist in database
     $('#lookupform').submit(function(event){
+        $('#actualbutton').addClass('d-none');
+        $('#waitingbtn').removeClass('d-none');
         event.preventDefault();
         const email = $('#email').val();
         $.ajax({
@@ -37,6 +39,9 @@ $(document).ready(function(){
                     
                 }
                 
+            }, complete:function(responses){
+                $('#actualbutton').removeClass('d-none');
+                $('#waitingbtn').addClass('d-none');
             }
         })
     })
@@ -45,6 +50,8 @@ $(document).ready(function(){
     // update password
     $('#updatepwd').submit(function(event){
         event.preventDefault();
+        $('#actualbutton').addClass('d-none');
+        $('#waitingbtn').removeClass('d-none');
         const code = $('#v-code').val();
         const pwd = $('#pwd').val();
 
@@ -95,6 +102,9 @@ $(document).ready(function(){
                     console.log(data);
                     
                 }
+            }, complete:function(responses){
+                $('#actualbutton').removeClass('d-none');
+                $('#waitingbtn').addClass('d-none');
             }
         })
     })

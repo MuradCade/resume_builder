@@ -39,7 +39,17 @@ if(isset($_SESSION['uid'])){
                             <label class="form-label">Email</label>
                             <input type="text" id='email' class="form-control" placeholder="e.g john@example.com" style='font-size:14px;'>
                             </div>
-                               <button class="btn btn-primary btn-sm fw-bold">Submit</button>
+                              <!-- hide the actual button when the request is made in ajax -->
+                              <div id="actualbutton">
+                                        <button class='btn btn-secondary btn-sm text-white fw-bold' id='createaccountbtn'>Submit</button>
+                                        </div>
+                            
+                            <button class='btn btn-secondary disabled d-none' id='waitingbtn'>
+                            <div id="spinner" class="spinner-border spinner-border-sm text-white " role="status">
+                                </div>
+                                <span class="visually fw-bold" style="font-size:14px;">Submitting...</span>
+                           <!-- Submiting -->
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -58,16 +68,26 @@ if(isset($_SESSION['uid'])){
                         <p class=" p-2 text-white fw-bold d-none" id="msg02"></p>
                             <div class="form-group mb-3">
                             <label class="form-label">Verification Code</label>
-                            <input type="text" id='v-code' class="form-control" placeholder="e.g john@example.com" style='font-size:14px;'>
+                            <input type="text" id='v-code' class="form-control" placeholder="Enter Verfication Code" style='font-size:14px;'>
                             </div>
 
                             <p class="bg-danger p-2 text-white fw-bold" id="messagedisplayer" style="display:none;"></p>
                             <div class="form-group mb-3">
                             <label class="form-label">New Password</label>
-                            <input type="password" id='pwd' class="form-control"  style='font-size:14px;'>
+                            <input type="password" id='pwd' class="form-control"  placeholder="Enter New Password "style='font-size:14px;'>
                             </div>
 
-                            <button class="btn btn-primary btn-sm">Submit</button>
+                            <!-- hide the actual button when the request is made in ajax -->
+                            <div id="actualbutton">
+                                        <button class='btn btn-secondary btn-sm text-white fw-bold' id='createaccountbtn'>Submit</button>
+                                        </div>
+                            
+                            <button class='btn btn-secondary disabled d-none' id='waitingbtn'>
+                            <div id="spinner" class="spinner-border spinner-border-sm text-white " role="status">
+                                </div>
+                                <span class="visually fw-bold" style="font-size:14px;">Submitting...</span>
+                           <!-- Submiting -->
+                            </button>
                         </form>
                     </div>
                 </div>

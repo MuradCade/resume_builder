@@ -41,58 +41,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $result2 = mysqli_query($connection,$sql2);
                 if($result2){
                     $emailarray = ["email"=>$email,"username"=>$username,"subject"=>"Confirm Your Email","body"=>"
-                 
-                     <style>
-                                        body {
-                                            font-family: Arial, sans-serif;
-                                            background-color: #f4f4f4;
-                                            margin: 0;
-                                            padding: 0;
-                                        }
-                                        .email-container {
-                                            max-width: 600px;
-                                            margin: 20px auto;
-                                            background-color: #ffffff;
-                                            border-radius: 8px;
-                                            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                                            overflow: hidden;
-                                        }
-                                        .email-header {
-                                            background-color: #565e64;
-                                            color: #ffffff;
-                                            padding: 20px;
-                                            text-align: center;
-                                        }
-                                        .email-body {
-                                            padding: 20px;
-                                            color: #333333;
-                                            line-height: 1.6;
-                                        }
-                                        .email-body h1 {
-                                            margin-top: 0;
-                                        }
-                                        .email-footer {
-                                            background-color: #f4f4f4;
-                                            padding: 10px;
-                                            text-align: center;
-                                            font-size: 12px;
-                                            color: #666666;
-                                        }
-                                        .confirm-button {
-                                            display: inline-block;
-                                            background-color: #007bff;
-                                            color: #ffffff;
-                                            text-decoration: none;
-                                            padding: 10px 20px;
-                                            border-radius: 4px;
-                                            margin-top: 20px;
-                                            font-weight: bold;
-                                        }
-                                        .confirm-button:hover {
-                                            background-color: #0056b3;
-                                        }
-                                    </style>
-    
                                     <div class='email-container'>
                                         <div class='email-header'>
                                             <h1 style='font-size: 20px;position:relative; top:5px;'>Confirm Your Email Address</h1>
@@ -108,9 +56,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                             <p>This email was sent to you because you signed up on our platform.</p>
                                         </div>
                                     </div> 
-                    
-    
-                                   
                     "];
     
     

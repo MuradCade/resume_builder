@@ -1,3 +1,8 @@
+<?php 
+
+$url= $_SERVER['REQUEST_URI'];
+
+?>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid px-5">
     <a class="navbar-brand d-flex align-items-center" href="index.php">
@@ -10,13 +15,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto" style="font-size: 14px !important;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link <?= $url == '/index.php'?'active':($url=='/'?'active':'');?>" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="login.php">Login</a>
+          <a class="nav-link <?= $url == '/login.php'?'active':'';?>" href="login.php">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="signup.php" id="singup">Create Account</a>
+          <a class="nav-link <?= $url == '/signup.php'?'active':'';?>" href="signup.php" >Create Account</a>
         </li>
        
         

@@ -8,6 +8,7 @@ This is a **Resume Builder Web App** built using **PHP (Procedural), jQuery, AJA
 ### Key Features:
 - **User Authentication**: Users can create an account and log in using their email and password.
 - **Email Confirmation**: After account creation, an email confirmation is sent to the user to verify the account.
+- **Forget Password**: Users can recover thier account easily by providing thier existing account email , and they will get email on thier mail provider with instruction to recover thier accounts.
 - **Congratulation Email**: A congratulatory email is sent when the user's email is confirmed.
 - **PDF Export**: Users can download their resume as a PDF with the information they've entered.
 - **Single Template**: The web app offers a single, clean, blank template for building resumes.

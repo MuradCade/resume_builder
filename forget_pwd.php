@@ -15,7 +15,7 @@ if(isset($_SESSION['uid'])){
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cv-Builder | Login</title>
+    <title>Cv-Builder | Forget Pwd</title>
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -26,45 +26,59 @@ if(isset($_SESSION['uid'])){
     
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12 fw-bold mt-4 mx-auto" style="font-size: 14px;">
+            <?php if(!isset($_SESSION['emails'])){?>
+            <div class="col-lg-6 col-md-12 col-sm-12 fw-bold mt-4 mx-auto forget-pwd" style="font-size: 14px;">
                 <div class="card">
                     <h4 class="card-header" style="font-size: 15px; font-weight:600">
-                        Login
+                        Forget Password
                     </h4>
                     <div class="card-body">
-                        <form id='loginform' class='mb-2'>
-                            <p class="bg-danger p-2 text-white fw-bold" id="messagedisplayer" style="display:none;"></p>
+                        <form id='lookupform'>
+                            <p class=" p-2 text-white fw-bold d-none" id="msg01"></p>
                             <div class="form-group mb-3">
                             <label class="form-label">Email</label>
                             <input type="text" id='email' class="form-control" placeholder="e.g john@example.com" style='font-size:14px;'>
                             </div>
-                            <div class="form-group mb-3">
-                            <label class="form-label">Password</label>
-                            <input type="password" id='password' class="form-control" placeholder="e.g ****" style='font-size:14px;'>
-                            </div>
-
-                                        <!-- hide the actual button when the request is made in ajax -->
-                                        <div id="actualbutton">
-                                        <button class='btn btn-secondary btn-sm text-white fw-bold' id='createaccountbtn'>Login</button>
-                                        </div>
-                            
-                            <button class='btn btn-secondary disabled d-none' id='waitingbtn'>
-                            <div id="spinner" class="spinner-border spinner-border-sm text-white " role="status">
-                                </div>
-                                <span class="visually fw-bold" style="font-size:14px;">Submitting...</span>
-                           <!-- Submiting -->
-                            </button>
+                               <button class="btn btn-primary btn-sm fw-bold">Submit</button>
                         </form>
-                        <a href="forget_pwd.php"  style="font-size:12px;">Forget password</a>
                     </div>
                 </div>
 
             </div>
+            <?php }else{?>
+            <!-- recover password form -->
+             <div class=" col-lg-6 col-md-2 col-sm-12 fw-bold mx-auto recover-account">
+                <div class="card">
+                <h4 class="card-header" style="font-size: 15px; font-weight:600">
+                        Recover Account
+                    </h4>
+
+                    <div class="card-body">
+                        <form id="updatepwd">
+                        <p class=" p-2 text-white fw-bold d-none" id="msg02"></p>
+                            <div class="form-group mb-3">
+                            <label class="form-label">Verification Code</label>
+                            <input type="text" id='v-code' class="form-control" placeholder="e.g john@example.com" style='font-size:14px;'>
+                            </div>
+
+                            <p class="bg-danger p-2 text-white fw-bold" id="messagedisplayer" style="display:none;"></p>
+                            <div class="form-group mb-3">
+                            <label class="form-label">New Password</label>
+                            <input type="password" id='pwd' class="form-control"  style='font-size:14px;'>
+                            </div>
+
+                            <button class="btn btn-primary btn-sm">Submit</button>
+                        </form>
+                    </div>
+                </div>
+             </div>
+             <?php }?>
         </div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="assets/js/auth.js"></script>
+    <script src="assets/js/forgetpwd.js"></script>
 </body>
 </html>
